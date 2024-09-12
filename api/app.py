@@ -1,11 +1,7 @@
 from flask import Flask, redirect, render_template, request
-from tools import select_task_by_rating, get_best_rating
-
-# from config import Config
-
+from tools.tools import get_best_rating, select_task_by_rating
 
 app = Flask(__name__)
-# app.config.from_object(Config)
 
 
 @app.route("/", methods=["GET", "POST"])
